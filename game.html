@@ -56,6 +56,7 @@
         var ball1Size = 100;
         var ball2Size = 100;
         var ball2SizeStep = 50;
+        var ball3IsOn = false;
 
         function onBall1Click() {
             var ball1 = document.querySelector('.ball1');
@@ -106,7 +107,16 @@
         }
         function onBall3Click() {
             var ball = document.querySelector('.ball3');
-            alert('Ball3');
+            
+            if (ball3IsOn) {
+                ball.innerText = "OFF";
+                ball.style.backgroundColor = 'gray';
+                ball3IsOn = false;
+            } else {
+                ball.innerText = "ON";
+                ball.style.backgroundColor = 'yellow';
+                ball3IsOn = true;
+            }
         }
         function onBall4Click() {
             var ball = document.querySelector('.ball4');
