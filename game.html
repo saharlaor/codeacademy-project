@@ -120,7 +120,16 @@
         }
         function onBall4Click() {
             var ball = document.querySelector('.ball4');
-            alert('Ball4');
+            if (ball3IsOn) {
+                var ball4Size = prompt("Ball size?");
+
+                if (ball4Size > 1000) {
+                    alert("Too Big!");
+                } else {
+                    ball.style.width = ball4Size;
+                    ball.style.height = ball4Size;
+                }
+            }
         }
     </script>
 </body>
